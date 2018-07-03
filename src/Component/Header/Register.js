@@ -45,10 +45,6 @@ class Register extends React.Component {
                           </div>
                         </form>
                       </CardBody>
-                      <ModalFooter className="mx-5 pt-3 mb-1">
-                        <p className="font-small grey-text d-flex justify-content-end">Vous êtes déjà membre? <a onClick={this.toggle14}
-                 ref="#" className="pink-text ml-1"> Connexion</a></p>
-                      </ModalFooter>
                     </Card>
                   </Col>
                 </Row>
