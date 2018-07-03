@@ -1,27 +1,30 @@
 const express = require('express');
-const session = require('cookie-session'); // Charge le middleware de sessions
-const bodyParser = require('body-parser');
-// Charge le middleware de gestion des paramètres
-const urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 const app = express();
+const bodyParser = require('body-parser');
 const mysql = require('mysql');
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+  extended: true,
+}));
 
 
-const connection = mysql.createConnection({
+const c = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: '',
   database: 'rentcar',
 });
 
+c.connect();
 
-/* On utilise les sessions */
-app.use(session({ secret: 'test' }))
 
-.post('/', urlencodedParser, (req, res) => {
 
-})
+app.all('*', (req, res, next) => {
+  return res.send('page not found');
+  next();
+});
 
-  .listen(8080);
+app.listen(8080);
+

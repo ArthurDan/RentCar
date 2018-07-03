@@ -7,19 +7,26 @@ import { hot } from 'react-hot-loader';
 import {
   BrowserRouter as Router,
   Route,
-  Link,
+ 
 } from 'react-router-dom';
 
 
 
 class App extends Component {
+
+
+
+
   render() {
     return (
       <div className="App">
       <Router>
+        <div>
         <Header/>
         <Grid/>
-        <Route exact path="/" component={App} />
+        
+        
+        </div>
       </Router>  
       </div>
     );
