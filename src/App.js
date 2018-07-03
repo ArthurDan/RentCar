@@ -9,6 +9,7 @@ import {
   Route,
   Link,
 } from 'react-router-dom';
+import BodyAnnonce from './Component/Annonce/BodyAnnonce';
 
 
 
@@ -18,8 +19,11 @@ class App extends Component {
       <div className="App">
       <Router>
         <div>
-        <Header/>
-        <Grid/>
+        <Header/>        
+
+        <Route exact path="/" component={Grid}/>
+        <Route path="/bodyAnnonce" component={BodyAnnonce}/>
+
         </div>  
       </Router>      
       </div>
