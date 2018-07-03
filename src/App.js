@@ -17,10 +17,11 @@ class App extends Component {
     return (
       <div className="App">
       <Router>
+        <div>
         <Header/>
         <Grid/>
-        <Route exact path="/" component={App} />
-      </Router>  
+        </div>  
+      </Router>      
       </div>
     );
   }

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Container, Button, Modal, ModalBody, Row, Col, Input, Fa, Card, CardBody, ModalFooter, ModalHeader} from 'mdbreact';
-import Login from './Login';
 
 
 class Register extends React.Component {
@@ -8,17 +7,12 @@ class Register extends React.Component {
     super(props);
     this.state = {
       modal14: false,
-      displayConfirmModal: true
     };
 
     this.toggle14 = this.toggle14.bind(this);
   }
 
-  loginModal(){
-    return(
-      <Login/>
-    )
-  }
+  
 
   toggle14() {
     this.setState({
@@ -52,14 +46,13 @@ class Register extends React.Component {
                         </form>
                       </CardBody>
                       <ModalFooter className="mx-5 pt-3 mb-1">
-                        <p className="font-small grey-text d-flex justify-content-end">Vous êtes déjà membre? <a onClick={() => { this.setState({displayConfirmModal: false})}}
+                        <p className="font-small grey-text d-flex justify-content-end">Vous êtes déjà membre? <a onClick={this.toggle14}
                  ref="#" className="pink-text ml-1"> Connexion</a></p>
                       </ModalFooter>
                     </Card>
                   </Col>
                 </Row>
               </section>
-              { this.state.displayConfirmModal ? this.loginModal() : null }
           </ModalBody>
         </Modal>
       </Container>
