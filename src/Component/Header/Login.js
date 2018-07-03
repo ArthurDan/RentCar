@@ -39,10 +39,7 @@ class Login extends React.Component {
                         <div className="text-center mb-3">
                           <Button type="button" gradient="pink" rounded className="btn-block z-depth-1a">Connexion</Button>
                         </div>
-                      </CardBody>
-                      <ModalFooter className="mx-5 pt-3 mb-1">
-                        <p className="font-small grey-text d-flex justify-content-end">Vous n'est pas membre? <a href="#" className="pink-text ml-1"> S'enregistrer</a></p>
-                      </ModalFooter>
+                      </CardBody>                      
                     </Card>
                   </Col>
                 </Row>

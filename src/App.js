@@ -24,10 +24,15 @@ class App extends Component {
         <div>
         <Header/>
         <Grid/>
+<<<<<<< HEAD
         
         
         </div>
       </Router>  
+=======
+        </div>  
+      </Router>      
+>>>>>>> f9e1d51631b11bdc41d6caa4866aadbb417b2ce0
       </div>
     );
   }
