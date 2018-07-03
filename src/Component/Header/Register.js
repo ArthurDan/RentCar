@@ -1,15 +1,23 @@
 import React from 'react';
 import { Container, Button, Modal, ModalBody, Row, Col, Input, Fa, Card, CardBody, ModalFooter, ModalHeader} from 'mdbreact';
+import Login from './Login';
 
 
 class Register extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      modal14: false
+      modal14: false,
+      displayConfirmModal: true
     };
 
     this.toggle14 = this.toggle14.bind(this);
+  }
+
+  loginModal(){
+    return(
+      <Login/>
+    )
   }
 
   toggle14() {
@@ -39,17 +47,19 @@ class Register extends React.Component {
                           <Input label="Confirmer votre email" group type="email" icon="exclamation-triangle" id="defaultFormRegisterEmailEx"/>
                           <Input label="Votre mot de passe" group type="password" icon="lock" validate containerClass="mb-0" ref="password"/>
                           <div className="text-center mb-3">
-                            <Button type="submit" gradient="pink" rounded className="btn-block z-depth-1a">S'inscrire</Button>
+                            <Button type="submit" gradient="pink" rounded className="btn-block z-depth-1a mt-4">S'inscrire</Button>
                           </div>
                         </form>
                       </CardBody>
                       <ModalFooter className="mx-5 pt-3 mb-1">
-                        <p className="font-small grey-text d-flex justify-content-end">Vous êtes déjà membre? <a href="#" className="pink-text ml-1"> Connexion</a></p>
+                        <p className="font-small grey-text d-flex justify-content-end">Vous êtes déjà membre? <a onClick={() => { this.setState({displayConfirmModal: false})}}
+                 ref="#" className="pink-text ml-1"> Connexion</a></p>
                       </ModalFooter>
                     </Card>
                   </Col>
                 </Row>
               </section>
+              { this.state.displayConfirmModal ? this.loginModal() : null }
           </ModalBody>
         </Modal>
       </Container>

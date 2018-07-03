@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {CardGroup} from 'mdbreact';
-import Cards from './Card';
+import Cards from '../Annonce/Card';
 
 class Grid extends Component {
 
