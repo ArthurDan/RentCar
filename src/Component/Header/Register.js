@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Button, Modal, ModalBody, Row, Col, Input, Fa, Card, CardBody,  ModalHeader} from 'mdbreact';
-import axios from 'axios';
+
 
 class Register extends React.Component {
   constructor(props) {
@@ -37,7 +37,7 @@ class Register extends React.Component {
         return response.json();
     }).then(function(data) {
         console.log(data)    
-        if(data === "success"){
+        if(data == "success"){
            this.setState({msg: "Thanks for registering"});  
         }
     }).catch(function(err) {

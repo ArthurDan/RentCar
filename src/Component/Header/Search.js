@@ -6,11 +6,48 @@ class Search extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      modal14: false
+      modal14: false,
+      marque:'',
+      ville:'',
+      adresse:''
+
     };
 
     this.toggle14 = this.toggle14.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+
+}
+
+handleSubmit(event) {
+  event.preventDefault()
+  var data = {
+      name: this.state.marque,
+      email: this.state.ville,
+      mdp: this.state.adresse
   }
+  console.log(data)
+  fetch("/", {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(data)
+  }).then(function(response) {
+      if (response.status >= 400) {
+        throw new Error("Bad response from server");
+      }
+      return response.json();
+  }).then(function(data) {
+      console.log(data)    
+      if(data == "success"){
+           
+      }
+  }).catch(function(err) {
+      console.log(err)
+  });
+}
+
+logChange = (e) => {
+this.setState({[e.target.name]: e.target.value});  
+}
 
   toggle14() {
     this.setState({
@@ -39,7 +76,8 @@ class Search extends React.Component {
                                 <Input hint="Adresse" type="text" icon="" containerClass="active-pink-2  mx-auto " className="form-control" aria-label="Search"/>
                             </FormInline>
                             <FormInline className="mx-auto md-form mr-auto mb-4 mt-0">
-                                <TextField className="mx-auto"
+                              <form noValidate className="mx-auto" onSubmit={this.onSubmit}>
+                                <TextField 
                                   id="date"
                                   label="Début de location"
                                   type="date"
@@ -48,9 +86,9 @@ class Search extends React.Component {
                                     shrink: true,
                                   }}
                                 />
-                              
-                              
-                                <TextField style={{width : '181px'}} className="mx-auto"
+                              </form>
+                              <form noValidate className="mx-auto">
+                                <TextField style={{width : '181px'}}
                                   id="date"
                                   label="Fin de location"
                                   type="date"
@@ -59,7 +97,7 @@ class Search extends React.Component {
                                     shrink: true,
                                   }}
                                 />
-                              
+                              </form>
                             </FormInline>
                             <div className="text-center mb-3">
                             <Button type="button" gradient="pink" rounded className="btn-block z-depth-1a">Louer</Button>
