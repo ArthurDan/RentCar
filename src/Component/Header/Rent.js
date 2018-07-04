@@ -23,7 +23,8 @@ class Rent extends React.Component {
     });
 }
   state = {
-    age: ''
+    annee:'',
+    km: ''
   };
 
   handleChange = name => event => {
@@ -62,27 +63,24 @@ class Rent extends React.Component {
                             <Button type="button" gradient="pink" style={{top:'10px'}} className="close" onClick={this.toggle14}><span aria-hidden="true">x</span></Button>                     
                         </ModalHeader>
                         <CardBody className="mx-4 grey-text">
-                            <FormInline className="md-form mr-auto mb-4 mt-0">
-                                <Input containerClass="active-pink-2  mx-auto" icon="" className="form-control" type="text" hint="Ville" aria-label="Search" />
-                                <Fa icon="map-marked-alt"/>
-                                <Input hint="Adresse" type="text" containerClass="active-pink-2  mx-auto " className="form-control" aria-label="Search"/>
+                            <FormInline className="md-form mr-auto mb-4 mt-0 grey-text">
+                                <Input containerClass="active-pink-2  mx-auto" icon="map-marker" className="form-control" type="text" hint="Ville" aria-label="Search" />
+                                <Input hint="Adresse" type="text" containerClass="active-pink-2  mx-auto " icon="map-marker" className="form-control" aria-label="Search"/>
                             </FormInline>
                             <FormInline className="md-form mr-auto mb-4 mt-0">
-                                <Fa icon="city"/>
                                 <Input containerClass="active-pink-2  mx-auto" className="form-control" type="text" hint="Marque" aria-label="Search" />
-                                <Fa icon="position"/>
                                 <Input hint="Modèle" type="text" containerClass="active-pink-2  mx-auto " className="form-control" aria-label="Search"/>
                             </FormInline>
                             <FormInline className=" mr-auto mb-4 mt-0">
                               <FormControl className="mx-auto">
-                                <InputLabel htmlFor="age-native-simple">Année</InputLabel>
+                                <InputLabel htmlFor="annee-native-simple">Année</InputLabel>
                                 <Select style={{width:'180px'}}
                                   native
-                                  value={this.state.age}
-                                  onChange={this.handleChange('age')}
+                                  value={this.state.annee}
+                                  onChange={this.handleChange('annee')}
                                   inputProps={{
-                                    name: 'age',
-                                    id: 'age-native-simple',
+                                    name: 'annee',
+                                    id: 'annee-native-simple',
                                   }}
                                 >
                                   <option value="" />
@@ -98,14 +96,14 @@ class Rent extends React.Component {
                                 </Select>
                               </FormControl>
                               <FormControl className="mx-auto">
-                                <InputLabel htmlFor="age-native-simple">Kilométrage</InputLabel>
+                                <InputLabel htmlFor="km-native-simple">Kilométrage</InputLabel>
                                 <Select style={{width:'180px'}}
                                   native
                                   value={this.state.age}
-                                  onChange={this.handleChange('age')}
+                                  onChange={this.handleChange('km')}
                                   inputProps={{
-                                    name: 'age',
-                                    id: 'age-native-simple',
+                                    name: 'km',
+                                    id: 'km-native-simple',
                                   }}
                                 >
                                   <option value="" />

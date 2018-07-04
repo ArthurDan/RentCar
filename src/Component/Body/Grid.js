@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import {CardGroup} from 'mdbreact';
 import Cards from '../Annonce/Card';
-import {Link} from 'react-router-dom';
-
 
 class Grid extends Component{
     render(){
