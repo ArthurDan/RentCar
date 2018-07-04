@@ -42,7 +42,7 @@ class Search extends React.Component {
                               <form noValidate className="mx-auto">
                                 <TextField 
                                   id="date"
-                                  label="Début"
+                                  label="Début de location"
                                   type="date"
                                   defaultValue="2017-05-24"
                                   InputLabelProps={{
@@ -53,7 +53,7 @@ class Search extends React.Component {
                               <form noValidate className="mx-auto">
                                 <TextField style={{width : '181px'}}
                                   id="date"
-                                  label="Fin"
+                                  label="Fin de location"
                                   type="date"
                                   defaultValue="2017-05-24"
                                   InputLabelProps={{

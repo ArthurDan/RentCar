@@ -5,6 +5,7 @@ import ImageUploader from 'react-images-upload';
 import InputLabel from '@material-ui/core/InputLabel';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
+import TextField from '@material-ui/core/TextField';
 
 class Rent extends React.Component {
   constructor(props) {
@@ -64,38 +65,38 @@ class Rent extends React.Component {
                         </ModalHeader>
                         <CardBody className="mx-4 grey-text">
                             <FormInline className="md-form mr-auto mb-4 mt-0 grey-text">
-                                <Input containerClass="active-pink-2  mx-auto" icon="map-marker" className="form-control" type="text" hint="Ville" aria-label="Search" />
-                                <Input hint="Adresse" type="text" containerClass="active-pink-2  mx-auto " icon="map-marker" className="form-control" aria-label="Search"/>
-                            </FormInline>
-                            <FormInline className="md-form mr-auto mb-4 mt-0">
+                                <Input containerClass="active-pink-2  mx-auto" className="form-control" type="text" hint="Ville" aria-label="Search" />
+                                <Input hint="Adresse" type="text" containerClass="active-pink-2  mx-auto " className="form-control" aria-label="Search"/>
                                 <Input containerClass="active-pink-2  mx-auto" className="form-control" type="text" hint="Marque" aria-label="Search" />
+                            </FormInline>
+                            <FormInline className="mr-auto mb-4 mt-0">                                
                                 <Input hint="Modèle" type="text" containerClass="active-pink-2  mx-auto " className="form-control" aria-label="Search"/>
                                 <Input hint="Prix /€" type="text" containerClass="active-pink-2  mx-auto " className="form-control" aria-label="Search"/>
+                                <FormControl className="mx-auto mb-3">
+                                  <InputLabel htmlFor="annee-native-simple">Année</InputLabel>
+                                  <Select style={{width:'180px'}}
+                                    native
+                                    value={this.state.annee}
+                                    onChange={this.handleChange('annee')}
+                                    inputProps={{
+                                      name: 'annee',
+                                      id: 'annee-native-simple',
+                                    }}
+                                  >
+                                    <option value="" />
+                                    <option value={2018}>2018</option>
+                                    <option value={2017}>2017</option>
+                                    <option value={2016}>2016</option>
+                                    <option value={2015}>2015</option>
+                                    <option value={2014}>2014</option>
+                                    <option value={2013}>2013</option>
+                                    <option value={2012}>2012</option>
+                                    <option value={2011}>2011</option>
+                                    <option value={2010}>2010</option>
+                                  </Select>
+                                </FormControl>
                             </FormInline>
-                            <FormInline className=" mr-auto mb-4 mt-0">
-                              <FormControl className="mx-auto">
-                                <InputLabel htmlFor="annee-native-simple">Année</InputLabel>
-                                <Select style={{width:'180px'}}
-                                  native
-                                  value={this.state.annee}
-                                  onChange={this.handleChange('annee')}
-                                  inputProps={{
-                                    name: 'annee',
-                                    id: 'annee-native-simple',
-                                  }}
-                                >
-                                  <option value="" />
-                                  <option value={2018}>2018</option>
-                                  <option value={2017}>2017</option>
-                                  <option value={2016}>2016</option>
-                                  <option value={2015}>2015</option>
-                                  <option value={2014}>2014</option>
-                                  <option value={2013}>2013</option>
-                                  <option value={2012}>2012</option>
-                                  <option value={2011}>2011</option>
-                                  <option value={2010}>2010</option>
-                                </Select>
-                              </FormControl>
+                            <FormInline className=" mr-auto mb-4 mt-0">                              
                               <FormControl className="mx-auto">
                                 <InputLabel htmlFor="km-native-simple">Kilométrage</InputLabel>
                                 <Select style={{width:'180px'}}
@@ -117,7 +118,29 @@ class Rent extends React.Component {
                                   <option value={300000}>+ 300 000</option>
                                 </Select>
                               </FormControl>
-                            </FormInline>  
+                              <form noValidate className="mx-auto">
+                                <TextField 
+                                  id="date"
+                                  label="Début de location"
+                                  type="date"
+                                  defaultValue="2017-05-24"
+                                  InputLabelProps={{
+                                    shrink: true,
+                                  }}
+                                />
+                              </form>
+                              <form noValidate className="mx-auto">
+                                <TextField style={{width : '181px'}}
+                                  id="date"
+                                  label="Fin de location"
+                                  type="date"
+                                  defaultValue="2017-05-24"
+                                  InputLabelProps={{
+                                    shrink: true,
+                                  }}
+                                />
+                              </form>
+                            </FormInline> 
                             <div className="text-center mb-4 mt-3">
                               <ImageUploader
                                   withIcon={true}
