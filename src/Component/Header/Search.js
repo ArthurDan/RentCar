@@ -47,8 +47,7 @@ class Search extends React.Component {
                                   InputLabelProps={{
                                     shrink: true,
                                   }}
-                                />
-                              
+                                />                           
                               
                                 <TextField style={{width : '181px'}} className="mx-auto"
                                   id="date"
