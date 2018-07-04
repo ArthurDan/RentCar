@@ -11,7 +11,6 @@ import {
 import BodyAnnonce from './Component/Annonce/BodyAnnonce';
 
 
-
 class App extends Component {
   render() {
     return (
