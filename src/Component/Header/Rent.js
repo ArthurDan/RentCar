@@ -1,8 +1,6 @@
 import React from 'react';
-import { Container, Button, Modal, ModalBody, Row, Col, Input, Fa, Card, CardBody, ModalFooter, FormInline, ModalHeader} from 'mdbreact';
+import { Container, Button, Modal, ModalBody, Row, Col, Input, Fa, Card, CardBody, FormInline, ModalHeader} from 'mdbreact';
 
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
 import InputLabel from '@material-ui/core/InputLabel';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';

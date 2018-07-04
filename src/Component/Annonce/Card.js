@@ -1,21 +1,13 @@
 import React, { Component } from 'react';
-import { Card, CardBody, CardImage, CardTitle, CardText, CardFooter} from 'mdbreact';
-import {
-    BrowserRouter as Router,
-    Route,
-    Link,
-  } from 'react-router-dom';
-  import { hot } from 'react-hot-loader';
+import { Card, CardBody, CardImage, CardTitle, CardText} from 'mdbreact';
+import {Link} from 'react-router-dom';
 
 
 class Cards extends Component{
-    constructor(props) {
-        super(props);
-    }
+   
     render(){
         return(    
             <Card>
-                <Link to="/bodyAnnonce">
                     <CardImage src={this.props.image} alt="Card image cap" top hover overlay="white-slight"/>                        
                     <CardBody>
                         <div className="d-flex flex-row">
@@ -24,8 +16,7 @@ class Cards extends Component{
                         <div className="d-flex flex-row"><CardText className="mr-auto p-2">{this.props.city} - {this.props.year}</CardText>
                             <CardText className="p-2"><strong className="price">{this.props.price}€</strong> /Jour</CardText>
                         </div>
-                    </CardBody>
-                </Link>                        
+                    </CardBody>                  
             </Card>            
         );
     }

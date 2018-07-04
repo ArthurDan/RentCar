@@ -6,8 +6,7 @@ import { hot } from 'react-hot-loader';
 
 import {
   BrowserRouter as Router,
-  Route,
-  Link,
+  Route
 } from 'react-router-dom';
 import BodyAnnonce from './Component/Annonce/BodyAnnonce';
 

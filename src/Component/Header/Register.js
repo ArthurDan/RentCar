@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Button, Modal, ModalBody, Row, Col, Input, Fa, Card, CardBody, ModalFooter, ModalHeader} from 'mdbreact';
+import { Container, Button, Modal, ModalBody, Row, Col, Input, Fa, Card, CardBody, ModalHeader} from 'mdbreact';
 
 
 class Register extends React.Component {
