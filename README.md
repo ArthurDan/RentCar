@@ -2,7 +2,7 @@
 
 ## Prérequis
 
-Pour le développement, vous aurez seulement besoin de Node.js sur votre environnement.
+Pour le déploiement, vous aurez seulement besoin de Node.js sur votre environnement.
 
 ### Node.js
 
@@ -16,7 +16,7 @@ Pour le développement, vous aurez seulement besoin de Node.js sur votre environ
 
 #### Installation de Node sur OS X
 
-Vous devrez utiliser un Terminal. Sur OS X, vous pouvez trouver le terminal par défaut dans `/Applications/Utilities/Terminal.app`.
+Vous devez utiliser un Terminal. Sur OS X, vous pouvez trouver le terminal par défaut dans `/Applications/Utilities/Terminal.app`.
 
 Veuillez installer [Homebrew](http://brew.sh/) si ce n'est déjà fait avec la commande suivante.
 
