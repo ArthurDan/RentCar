@@ -6,18 +6,12 @@ import { hot } from 'react-hot-loader';
 
 import {
   BrowserRouter as Router,
-  Route,
- 
+  Route
 } from 'react-router-dom';
 import BodyAnnonce from './Component/Annonce/BodyAnnonce';
 
 
-
 class App extends Component {
-
-
-
-
   render() {
     return (
       <div className="App">
