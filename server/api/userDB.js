@@ -59,6 +59,7 @@ verification = function(email){
 		};
 		return false;
 	});
+	
 
 };
 

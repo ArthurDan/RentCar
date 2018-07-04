@@ -11,10 +11,17 @@ const userDB = require('./api/userDB');
 
 app.use(bodyParser.json({ extended: false }));
 
-app.post('/toto', function(req, res, next) {
-
-
+app.post('/register', function(req, res, next) {
+    userDB.register(req.body.name,req.body.email,req.body.mdp)
+        
 });
+
+app.get('/delete', function(req, res, next) {
+		userDB.de
+        res.send(JSON.stringify(results));
+   
+});
+
 
 
 

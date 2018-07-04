@@ -7,9 +7,10 @@ class Search extends React.Component {
     super(props);
     this.state = {
       modal14: false,
-      marque:'',
       ville:'',
-      adresse:''
+      adresse:'',
+      date_debut:'',
+      date_fin:''
 
     };
 
@@ -20,10 +21,12 @@ class Search extends React.Component {
 
 handleSubmit(event) {
   event.preventDefault()
+  
   var data = {
-      name: this.state.marque,
-      email: this.state.ville,
-      mdp: this.state.adresse
+      ville: this.state.ville,
+      adresse: this.state.adresse,
+      dateD: this.state.date_debut,
+      dateF: this.state.date_fin
   }
   console.log(data)
   fetch("/", {
@@ -71,25 +74,29 @@ this.setState({[e.target.name]: e.target.value});
                             <Button type="button" gradient="pink" style={{top:'10px'}} className="close" onClick={this.toggle14}><span aria-hidden="true">x</span></Button>                     
                         </ModalHeader>
                         <CardBody className="mx-4 grey-text">
+                          <form onSubmit={this.handleSubmit}>
                             <FormInline className="md-form mr-auto mb-4 mt-0">
-                                <Input containerClass="active-pink-2  mx-auto" icon="" className="form-control" type="text" hint="Ville" aria-label="Search" />
-                                <Input hint="Adresse" type="text" icon="" containerClass="active-pink-2  mx-auto " className="form-control" aria-label="Search"/>
+                                <Input containerClass="active-pink-2  mx-auto" icon="" className="form-control" type="text" hint="Ville" aria-label="Search" name ="ville" onChange={this.logChange}  />
+                                <Input hint="Adresse" type="text" icon="" containerClass="active-pink-2  mx-auto " className="form-control" aria-label="Search" name="adresse" onChange={this.logChange} />
                             </FormInline>
                             <FormInline className="mx-auto md-form mr-auto mb-4 mt-0">
-                              <form noValidate className="mx-auto" onSubmit={this.onSubmit}>
+                         
                                 <TextField 
-                                  id="date"
+                                  name="date_debut"
+                                  onChange={this.logChange}
+                                  id="date_debut"
                                   label="Début de location"
                                   type="date"
                                   defaultValue="2017-05-24"
                                   InputLabelProps={{
                                     shrink: true,
                                   }}
-                                />
-                              </form>
-                              <form noValidate className="mx-auto">
-                                <TextField style={{width : '181px'}}
-                                  id="date"
+                                />                           
+                              
+                                <TextField style={{width : '181px'}} className="mx-auto"
+                                  name="date_fin"
+                                  onChange={this.logChange}
+                                  id="date_fin"
                                   label="Fin de location"
                                   type="date"
                                   defaultValue="2017-05-24"
@@ -97,11 +104,12 @@ this.setState({[e.target.name]: e.target.value});
                                     shrink: true,
                                   }}
                                 />
-                              </form>
+                              
                             </FormInline>
                             <div className="text-center mb-3">
                             <Button type="button" gradient="pink" rounded className="btn-block z-depth-1a">Louer</Button>
                             </div>
+                            </form>
                         </CardBody>
                     </Card>
                   </Col>

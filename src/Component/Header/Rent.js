@@ -12,11 +12,54 @@ class Rent extends React.Component {
     super(props);
     this.state = {
       pictures: [],
-      modal14: false
+      modal14: false,
+      marque:'',
+      ville:'',
+      modele:'',
+      adresse:'',
+      annee:'',
+      km:''
     };
     this.onDrop = this.onDrop.bind(this);
     this.toggle14 = this.toggle14.bind(this);
-  }
+    this.handleSubmit = this.handleSubmit.bind(this);
+
+}
+
+handleSubmit(event) {
+event.preventDefault()
+
+var data = {
+    marque: this.state.marque,
+    adresse: this.state.adresse,
+    modele: this.state.modele,
+    ville: this.state.ville,
+    annee: this.state.annee,
+    km: this.state.km
+}
+console.log(data)
+fetch("/", {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify(data)
+}).then(function(response) {
+    if (response.status >= 400) {
+      throw new Error("Bad response from server");
+    }
+    return response.json();
+}).then(function(data) {
+    console.log(data)    
+    if(data == "success"){
+         
+    }
+}).catch(function(err) {
+    console.log(err)
+});
+}
+
+logChange = (e) => {
+this.setState({[e.target.name]: e.target.value});  
+}
 
   onDrop(picture) {
     this.setState({
@@ -65,13 +108,13 @@ class Rent extends React.Component {
                         </ModalHeader>
                         <CardBody className="mx-4 grey-text">
                             <FormInline className="md-form mr-auto mb-4 mt-0 grey-text">
-                                <Input containerClass="active-pink-2  mx-auto" className="form-control" type="text" hint="Ville" aria-label="Search" />
-                                <Input hint="Adresse" type="text" containerClass="active-pink-2  mx-auto " className="form-control" aria-label="Search"/>
-                                <Input containerClass="active-pink-2  mx-auto" className="form-control" type="text" hint="Marque" aria-label="Search" />
+                                <Input containerClass="active-pink-2  mx-auto" className="form-control" type="text" hint="Ville" aria-label="Search" name="ville" onChange={this.logChange} />
+                                <Input hint="Adresse" type="text" containerClass="active-pink-2  mx-auto " className="form-control" aria-label="Search" name="adresse" onChange={this.logChange}/>
+                                <Input containerClass="active-pink-2  mx-auto" className="form-control" type="text" hint="Marque" aria-label="Search" name="marque" onChange={this.logChange}/>
                             </FormInline>
                             <FormInline className="mr-auto mb-4 mt-0">                                
-                                <Input hint="Modèle" type="text" containerClass="active-pink-2  mx-auto " className="form-control" aria-label="Search"/>
-                                <Input hint="Prix /€" type="text" containerClass="active-pink-2  mx-auto " className="form-control" aria-label="Search"/>
+                                <Input hint="Modèle" type="text" containerClass="active-pink-2  mx-auto " className="form-control" aria-label="Search" name="modele" onChange={this.logChange}/>
+                                <Input hint="Prix /€" type="text" containerClass="active-pink-2  mx-auto " className="form-control" aria-label="Search" name="prix" onChange={this.logChange}/>
                                 <FormControl className="mx-auto mb-3">
                                   <InputLabel htmlFor="annee-native-simple">Année</InputLabel>
                                   <Select style={{width:'180px'}}
