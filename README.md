@@ -35,7 +35,7 @@ Si tout va bien, vous devriez éxécuter
 
 #### Installation de Node sous Windows
 
-Allez sur le [official Node.js website](http://nodejs.org/) & télécharger le logiciel d'installation.
+Allez sur le [site officiel Node.js](http://nodejs.org/) & télécharger le logiciel d'installation.
 Assurez-vous également que la variable `git` soit dans votre PATH, `npm` pourrait en avoir besoin.
 
 ---
@@ -58,5 +58,6 @@ Assurez-vous également que la variable `git` soit dans votre PATH, `npm` pourra
 
 ##### Le design
 
+Pour designer le site, nous avons utiliser la libraire [MDBootstrap](https://mdbootstrap.com/react/)
 
 
