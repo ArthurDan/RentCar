@@ -8,7 +8,7 @@ class BodyAnnonce extends Component{
             <div className="test">
                 <div className="row elegant-color-dark">
                     <div class="mx-auto">
-                        <img src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg" class="img-fluid mx-auto" alt="Responsive"/>                                             
+                        <img src="Img/Car/clio.jpg" class="img-fluid mx-auto" alt="Responsive" width="600px" height="auto"/>                                             
                     </div>        
                 </div>
                 <div className="row text-center pt-3 ">

@@ -68,7 +68,7 @@ Lorsque l'utilisateur séléctionne une annonce de la page d'accueil, le site le
 
 ###### La navBar
 
-La navbar possède 5 bouttons, chacun faisant appel à formulaire sous forme de modal:
+La navbar possède 5 bouttons, chacun faisant appel à formulaire sous forme de modal :
 
 `Nous contacter` : formulaire permettant à l'utilisateur de contacter les administrateurs du site en précisant son nom, son email, le sujet du message ainsi que le contenu du message.
 
