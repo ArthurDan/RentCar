@@ -7,30 +7,47 @@ class Register extends React.Component {
     super(props);
     this.state = {
       modal14: false,
-      Name :'',
-      Email :'',
-      Password : '',
+      name: '',
+      email: '',
+      mdp: '',
+      msg:''
     };  
 
     this.toggle14 = this.toggle14.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+
   }
 
-  onChange = e => this.setState({ [e.target.name]: e.target.value })
-
-  handleSubmit = e => {
-    axios.post('/patient', {
-      name: this.state.Name,
-      email: this.state.Email,
-      password: this.state.Password
-    })
-    .then(function (response) {
-      console.log(response);
-    })
-    .catch(function (error) {
-      console.log(error);
+  handleSubmit(event) {
+    event.preventDefault()
+    var data = {
+        name: this.state.name,
+        email: this.state.email,
+        mdp: this.state.mdp
+    }
+    console.log(data)
+    fetch("/", {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(data)
+    }).then(function(response) {
+        if (response.status >= 400) {
+          throw new Error("Bad response from server");
+        }
+        return response.json();
+    }).then(function(data) {
+        console.log(data)    
+        if(data == "success"){
+           this.setState({msg: "Thanks for registering"});  
+        }
+    }).catch(function(err) {
+        console.log(err)
     });
-  }
+}
+
+logChange = (e) => {
+  this.setState({[e.target.name]: e.target.value});  
+}
 
   toggle14() {
     this.setState({
@@ -53,11 +70,11 @@ class Register extends React.Component {
                             <Button type="button" gradient="pink" style={{top:'10px'}} className="close" onClick={this.toggle14}><span aria-hidden="true">x</span></Button>                     
                       </ModalHeader>
                       <CardBody className="mx-4 grey-text">
-                        <form onSubmit={this.handleSubmit}>
-                          <Input label="Votre nom" group type="text" icon="user" validate error="wrong" success="right" name="name" value={this.state.Name} onChange={this.onChange}/>
-                          <Input label="Votre email" group type="email" icon="envelope" id="defaultFormRegisterEmailEx" name="email" value={this.state.Email} onChange={this.onChange}/>
+                        <form onSubmit={this.handleSubmit} method="POST">
+                          <Input label="Votre nom" group type="text" icon="user" validate error="wrong" success="right" onChange={this.logChange} name="name" />
+                          <Input label="Votre email" group type="email" icon="envelope" id="defaultFormRegisterEmai2lEx" onChange={this.logChange} name="email"/>
                           <Input label="Confirmer votre email" group type="email" icon="exclamation-triangle" id="defaultFormRegisterEmailEx" />
-                          <Input label="Votre mot de passe" group type="password" icon="lock" validate containerClass="mb-0" name="password" value={this.state.Password} onChange={this.onChange}/>
+                          <Input label="Votre mot de passe" group type="password" icon="lock" validate containerClass="mb-0"  onChange={this.logChange} name="mdp" />
                           <div className="text-center mb-3">
                             <Button type="submit" gradient="pink" rounded className="btn-block z-depth-1a mt-4">S'inscrire</Button>
                           </div>

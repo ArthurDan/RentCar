@@ -7,14 +7,30 @@ const fs = require('fs');
 const task = require('./api/task');
 var hash = require('object-hash');
 var nodemailer = require('nodemailer');
+const taskDB = require('./api/taskDB');
 
 
 app.use(bodyParser.json({ extended: false }));
 
+app.post('/toto', function(req, res, next) {
+  var connection = mysql.createConnection({
+		host: "localhost",
+		user: "root",
+		password: "",
+		database: "rentcar"
+  });
+  connection.query("INSERT INTO users SET name ='"+req.body.name+"',email='"+req.body.email+"', Password ='"+req.body.mdp+"'", function (error, results, fields){
+      if(error) throw error;
+      res.send(JSON.stringify(results));
+  });
+
+});
+
+
 // Route principale
-app.get('/', (req, res) => {
-	task.tempDataExist();
-	res.redirect('/patients');
+app.get('/toto', (req, res) => {
+
+	res.redirect('/');
 });
 
 // Route pour afficher tous les patients
@@ -46,6 +62,8 @@ app.delete('/patient/delete/:id', (req,res) => {
 	task.deleteP(req.params.id);
 	res.redirect('/patients');
 });
+
+
 
 // Route pour modifier un patient
 app.put('/patient/:id', (req, res) => {
