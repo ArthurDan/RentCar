@@ -56,7 +56,7 @@ Assurez-vous également que la variable `git` soit dans votre PATH, `npm` pourra
 
 #### React : Les composants et leur rôle
 
-###### Le design
+##### Le design
 
 
 
