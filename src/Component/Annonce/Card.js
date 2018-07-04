@@ -8,6 +8,7 @@ class Cards extends Component{
     render(){
         return(    
             <Card>
+                <Link to="/bodyAnnonce" names="caca">
                     <CardImage src={this.props.image} alt="Card image cap" top hover overlay="white-slight"/>                        
                     <CardBody>
                         <div className="d-flex flex-row">
@@ -16,7 +17,8 @@ class Cards extends Component{
                         <div className="d-flex flex-row"><CardText className="mr-auto p-2">{this.props.city} - {this.props.year}</CardText>
                             <CardText className="p-2"><strong className="price">{this.props.price}€</strong> /Jour</CardText>
                         </div>
-                    </CardBody>                  
+                    </CardBody> 
+                </Link>                     
             </Card>            
         );
     }

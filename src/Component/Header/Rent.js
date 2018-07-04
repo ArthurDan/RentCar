@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Button, Modal, ModalBody, Row, Col, Input, Fa, Card, CardBody, FormInline, ModalHeader} from 'mdbreact';
+import ImageUploader from 'react-images-upload';
 
 import InputLabel from '@material-ui/core/InputLabel';
 import FormControl from '@material-ui/core/FormControl';
@@ -9,12 +10,18 @@ class Rent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      pictures: [],
       modal14: false
     };
-
+    this.onDrop = this.onDrop.bind(this);
     this.toggle14 = this.toggle14.bind(this);
   }
-   
+
+  onDrop(picture) {
+    this.setState({
+        pictures: this.state.pictures.concat(picture),
+    });
+}
   state = {
     age: ''
   };
@@ -112,9 +119,18 @@ class Rent extends React.Component {
                                 </Select>
                               </FormControl>
                             </FormInline>  
-                                  
-                            <div className="text-center mb-3">
-                            <Button type="button" gradient="pink" rounded className="btn-block z-depth-1a">Louer sa voiture</Button>
+                            <div className="text-center mb-4 mt-3">
+                              <ImageUploader
+                                  withIcon={true}
+                                  buttonText='Choisissez une image'
+                                  onChange={this.onDrop}
+                                  imgExtension={['.jpg', '.gif', '.png', '.gif']}
+                                  maxFileSize={5242880}
+                                  withPreview={true}
+                              />
+                            </div>      
+                            <div className=" mb-3">
+                              <Button type="button" gradient="pink" rounded className="btn-block z-depth-1a">Louer sa voiture</Button>
                             </div>
                         </CardBody>
                     </Card>
