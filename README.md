@@ -16,7 +16,7 @@ Pour le déploiement, vous aurez seulement besoin de Node.js sur votre environne
 
 #### Installation de Node sur OS X
 
-Vous devez utiliser un Terminal. Sur OS X, vous pouvez trouver le terminal par défaut dans `/Applications/Utilities/Terminal.app`.
+Vous devez utiliser un terminal. Sur OS X, vous pouvez trouver le terminal par défaut dans `/Applications/Utilities/Terminal.app`.
 
 Veuillez installer [Homebrew](http://brew.sh/) si ce n'est déjà fait avec la commande suivante.
 
@@ -58,7 +58,7 @@ Assurez-vous également que la variable `git` soit dans votre PATH, `npm` pourra
 
 ##### Le design
 
-Pour designer le site, nous avons utiliser la libraire React [MDBootstrap](https://mdbootstrap.com/react/) basée sur [Bootstrap 4](https://getbootstrap.com/) sans utilisation de Jquery. Elle permet d'utiliser de nombreux composants utiles et personnalisables au développement du site.
+Pour designer le site, nous avons utilisé la librairie React [MDBootstrap](https://mdbootstrap.com/react/) basée sur [Bootstrap 4](https://getbootstrap.com/) sans utilisation de Jquery. Elle permet d'utiliser de nombreux composants utiles et personnalisables au développement du site.
 
 ##### La structure
 
@@ -68,7 +68,7 @@ Lorsque l'utilisateur séléctionne une annonce de la page d'accueil, le site le
 
 ###### La navBar
 
-La navbar possède 5 bouttons, chacun faisant appel à formulaire sous forme de modal :
+La navbar possède 5 bouttons, chacun faisant appel à un formulaire sous forme de modal :
 
 `Nous contacter` : formulaire permettant à l'utilisateur de contacter les administrateurs du site en précisant son nom, son email, le sujet du message ainsi que le contenu du message.
 
@@ -76,8 +76,8 @@ La navbar possède 5 bouttons, chacun faisant appel à formulaire sous forme de 
 
 `Se connecter` : formulaire permettant à l'utilisateur de se connecter à son compte en précisant son email et son mot de passe.
 
-`Louer une voiture`: formulaire permettant à l'utilisateur de recherches des annnonces de location de voiture suivant des critères précis : sa localisation et la durée de location voulue.
+`Louer une voiture`: formulaire permettant à l'utilisateur de rechercher des annnonces de location de voiture suivant des critères précis : sa localisation et la durée de location voulue.
 
-`Louer sa voiture`: formulaire permettant à l'utilisateur de poster son annonce de location de véhicule en précisant la marque, le modèle, son année de production, son kilométrage, le prix par journée de location accompagné d'une photo à importer représentant le véhicule concerné.
+`Louer sa voiture`: formulaire permettant à l'utilisateur de poster son annonce de location de véhicule en précisant la marque, le modèle, son année de production, son kilométrage, le prix par journée de location, la durée de location ainsi qu'une photo à importer représentant le véhicule concerné.
 
 
