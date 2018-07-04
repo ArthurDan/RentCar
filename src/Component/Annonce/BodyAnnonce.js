@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {Fa, TextField, Button} from 'mdbreact';
-import Card from './Card'
 
 class BodyAnnonce extends Component{
     render(){

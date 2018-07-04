@@ -39,8 +39,7 @@ class Search extends React.Component {
                                 <Input hint="Adresse" type="text" icon="" containerClass="active-pink-2  mx-auto " className="form-control" aria-label="Search"/>
                             </FormInline>
                             <FormInline className="mx-auto md-form mr-auto mb-4 mt-0">
-                              <form noValidate className="mx-auto">
-                                <TextField 
+                                <TextField className="mx-auto"
                                   id="date"
                                   label="Début de location"
                                   type="date"
@@ -49,9 +48,9 @@ class Search extends React.Component {
                                     shrink: true,
                                   }}
                                 />
-                              </form>
-                              <form noValidate className="mx-auto">
-                                <TextField style={{width : '181px'}}
+                              
+                              
+                                <TextField style={{width : '181px'}} className="mx-auto"
                                   id="date"
                                   label="Fin de location"
                                   type="date"
@@ -60,7 +59,7 @@ class Search extends React.Component {
                                     shrink: true,
                                   }}
                                 />
-                              </form>
+                              
                             </FormInline>
                             <div className="text-center mb-3">
                             <Button type="button" gradient="pink" rounded className="btn-block z-depth-1a">Louer</Button>

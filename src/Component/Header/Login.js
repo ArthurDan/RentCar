@@ -35,7 +35,7 @@ class Login extends React.Component {
                       <CardBody className="mx-4 grey-text">
                         <Input label="Votre Email" group type="email" icon="user" validate error="wrong" success="right"/>
                         <Input label="Votre mot de passe" group type="password" icon="lock" validate containerClass="mb-0"/>
-                        <p className="font-small pink-text d-flex justify-content-end pb-3">Mot de passe <a href="#" className="pink-text ml-1"> oublié?</a></p>
+                        <p className="font-small pink-text d-flex justify-content-end pb-3">Mot de passe <a href="/" className="pink-text ml-1"> oublié?</a></p>
                         <div className="text-center mb-3">
                           <Button type="button" gradient="pink" rounded className="btn-block z-depth-1a">Connexion</Button>
                         </div>
