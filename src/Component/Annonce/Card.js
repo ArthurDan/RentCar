@@ -8,7 +8,7 @@ class Cards extends Component{
     render(){
         return(    
             <Card>
-                <Link to="/bodyAnnonce" names="caca">
+                <Link to="/bodyAnnonce">
                     <CardImage src={this.props.image} alt="Card image cap" top hover overlay="white-slight"/>                        
                     <CardBody>
                         <div className="d-flex flex-row">

@@ -8,7 +8,9 @@ import {
   BrowserRouter as Router,
   Route
 } from 'react-router-dom';
+
 import BodyAnnonce from './Component/Annonce/BodyAnnonce';
+import Profil from './Component/Profil/Profil';
 
 
 class App extends Component {
@@ -21,6 +23,7 @@ class App extends Component {
 
         <Route exact path="/" component={Grid}/>
         <Route path="/bodyAnnonce" component={BodyAnnonce}/>
+        <Route path="/profil" component={Profil}/>
 
         </div>  
       </Router>      
