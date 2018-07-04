@@ -4,6 +4,7 @@ var nodemailer = require('nodemailer');
 var jsonObj = require('../test.json');
 var PDFDocument = require('pdfkit'); // Sert à la création du fichier PDF
 
+
 var ALPHABET = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
 var ID_LENGTH = 8;

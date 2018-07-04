@@ -23,14 +23,6 @@ class App extends Component {
       <div className="App">
       <Router>
         <div>
-<<<<<<< HEAD
-        <Header/>
-        <Grid/>
-
-
-        </div>
-      </Router>  
-=======
         <Header/>        
 
         <Route exact path="/" component={Grid}/>
@@ -38,7 +30,6 @@ class App extends Component {
 
         </div>  
       </Router>      
->>>>>>> 582414871bbc1b4617caec3f2c27120d9723d9e2
       </div>
     );
   }
