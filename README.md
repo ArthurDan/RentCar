@@ -82,7 +82,7 @@ La navbar possède 5 bouttons, chacun faisant appel à un formulaire sous forme 
 
 ##### Le transfert de données
 
-Le transfert de données s’effectue grâce à l’utilisation du  `fetch`. Avec cette fonction on décrit la méthode que l’on veut prendre ( POST) que l’on va envoyer sur une url voulue. Les données sont envoyées sous forme de `JSON` et sont récupérées par le serveur.
+Le transfert de données s’effectue grâce à l’utilisation du  `fetch`. Avec cette fonction on décrit la méthode que l’on veut prendre (`POST`) que l’on va envoyer sur une url voulue. Les données sont envoyées sous forme de `JSON` et sont récupérées par le serveur.
 
 ---
 
@@ -90,11 +90,11 @@ Le transfert de données s’effectue grâce à l’utilisation du  `fetch`. Ave
 
 ##### L'API
 
-Dans le backend on va retrouver deux api userDB et annonceDB, dans ces api on va pouvoir faire appel à toutes les fonctions d’ajout, de connexion, de suppression et autre que l’on aura besoin dans les routes gérées par le server.
+Dans le backend on va retrouver deux api `userDB` et `annonceDB`, dans ces api on va pouvoir faire appel à toutes les fonctions d’ajout, de connexion, de suppression et autre que l’on aura besoin dans les routes gérées par le server.
 
 ##### Les Routes
 
-Pour pouvoir gérer les routes de manière efficace on va utiliser express.
+Pour pouvoir gérer les routes de manière efficace on va utiliser `express`.
 
 Les routes vont nous permettre de gérer les données reçues par le Front et de faire la liaison avec la base de données.
 
