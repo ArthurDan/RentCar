@@ -64,6 +64,8 @@ Pour designer le site, nous avons utiliser la libraire React [MDBootstrap](https
 
 La page d'accueil se compose de deux composants : le composant `navBar` situé en haut de la fenêtre affiché en permanance et le composant `grille` affiché par défaut sur la page d'accueil qui répertorie les dernières annonces postées sur le site.
 
+Lorsque l'utilisateur séléctionne une annonce de la page d'accueil, le site le redirige vers un nouveau composant grâce à une route qui affiche les détails de l'annonce séléctionnée.
+
 ###### La navBar
 
 La navbar possède 5 bouttons, chacun faisant appel à formulaire sous forme de modal:
@@ -74,6 +76,8 @@ La navbar possède 5 bouttons, chacun faisant appel à formulaire sous forme de 
 
 `Se connecter` : formulaire permettant à l'utilisateur de se connecter à son compte en précisant son email et son mot de passe.
 
-`Louer une voiture`: 
+`Louer une voiture`: formulaire permettant à l'utilisateur de recherches des annnonces de location de voiture suivant des critères précis : sa localisation et la durée de location voulue.
+
+`Louer sa voiture`: formulaire permettant à l'utilisateur de poster son annonce de location de véhicule en précisant la marque, le modèle, son année de production, son kilométrage, le prix par journée de location accompagné d'une photo à importer représentant le véhicule concerné.
 
 
