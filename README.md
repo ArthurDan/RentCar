@@ -50,3 +50,13 @@ Assurez-vous également que la variable `git` soit dans votre PATH, `npm` pourra
 
     $ npm start
 
+---
+
+## Présentation du projet
+
+#### React : Les composants et leur rôle
+
+###### Le design
+
+
+
