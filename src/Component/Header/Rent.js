@@ -70,6 +70,7 @@ class Rent extends React.Component {
                             <FormInline className="md-form mr-auto mb-4 mt-0">
                                 <Input containerClass="active-pink-2  mx-auto" className="form-control" type="text" hint="Marque" aria-label="Search" />
                                 <Input hint="Modèle" type="text" containerClass="active-pink-2  mx-auto " className="form-control" aria-label="Search"/>
+                                <Input hint="Prix /€" type="text" containerClass="active-pink-2  mx-auto " className="form-control" aria-label="Search"/>
                             </FormInline>
                             <FormInline className=" mr-auto mb-4 mt-0">
                               <FormControl className="mx-auto">
