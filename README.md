@@ -66,10 +66,10 @@ La page d'accueil se compose de deux composants : le composant `navBar` situé e
 
 ###### La navBar
 
-    La navbar possède 5 bouttons, chacun faisant appel à formulaire sous forme de modal:
-    `Nous contacter` : formulaire permettant à l'utilisateur de contacter les administrateurs du site en précisant son nom, son email, le sujet du message ainsi que le contenu du message.
-    `S'inscrire`: formulaire permettant à l'utilisateur de se créer un compte pour déposer des annonces de locations ou pour pouvoir louer un véhicule. Il est demandé de préciser le nom, l'email, une confirmation de l'email ainsi que le mot de passe.
-    `Se connecter` : formulaire permettant à l'utilisateur de se connecter à son compte en précisant son email et son mot de passe.
-    `Louer une voiture`: 
+La navbar possède 5 bouttons, chacun faisant appel à formulaire sous forme de modal:
+`Nous contacter` : formulaire permettant à l'utilisateur de contacter les administrateurs du site en précisant son nom, son email, le sujet du message ainsi que le contenu du message.
+`S'inscrire`: formulaire permettant à l'utilisateur de se créer un compte pour déposer des annonces de locations ou pour pouvoir louer un véhicule. Il est demandé de préciser le nom, l'email, une confirmation de l'email ainsi que le mot de passe.
+`Se connecter` : formulaire permettant à l'utilisateur de se connecter à son compte en précisant son email et son mot de passe.
+`Louer une voiture`: 
 
 
